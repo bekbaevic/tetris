@@ -209,6 +209,27 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
+const reverseBtn = document.querySelector('#btn1')
+const leftBtn = document.querySelector("#btn4")
+const bottomBtn = document.querySelector("#btn3")
+const rightBtn = document.querySelector("#btn2")
+leftBtn.addEventListener('click', (event) => {
+    event.preventDefault()
+    playerMove(-1)
+})
+rightBtn.addEventListener('click', (event) => {
+    event.preventDefault()
+    playerMove(1)
+})
+bottomBtn.addEventListener('click', (event) => {
+    event.preventDefault()
+    playerDrop()
+})
+reverseBtn.addEventListener('click', (event) => {
+    event.preventDefault()
+    playerRotate(1)
+})
+
 const colors = [
     null,
     "#ff0d72",

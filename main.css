@@ -4,9 +4,109 @@ body{
     font-size: 2em;
     text-align: center;
     font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    user-select: none;
 }
 
 canvas {
     border: 0.2em solid #fff;
-    height: 90vh;
+    height: 60vh;
+}
+
+.remote{    
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    display: none;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    border: 2px solid #333;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(255, 46, 88);
+    
+}
+
+.btn1 {
+    top: -10%;
+    left: 25%;
+
+    transform: rotate(45deg);
+}
+
+.span{
+    display: block;
+    font-size: 24px;
+}
+
+.span1 {
+    transform: rotate(-45deg);
+}
+
+.span2 {
+    transform: rotate(45deg);
+}
+
+.span3 {
+    transform: rotate(135deg);
+}
+
+.span4 {
+    transform: rotate(225deg);
+}
+
+.btn.btn2 {
+    transform: rotate(45deg);
+
+    bottom: 25%;
+    right: -10%;
+}
+
+.btn.btn3 {
+    transform: rotate(45deg);
+
+    bottom: -10%;
+    left: 25%;
+}
+
+.btn.btn4 {
+    transform: rotate(45deg);
+
+    bottom: 25%;
+    left: -10.5%;
+}
+
+.circle {
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border: 2px solid #333;
+    width: 20px;
+    height: 20px;
+    background-color: crimson;
+    position: absolute;
+    z-index: 10;
+}
+
+@media screen and (max-width: 420px) {
+    .remote{
+        display: block;
+    }
 }
